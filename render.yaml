@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: secure-vibe-backend
+    name: rise-app
     env: python
     rootDir: backend
     buildCommand: "./build.sh"
@@ -14,15 +14,12 @@ services:
         value: "true"
       - key: CORS_ORIGINS
         value: "https://your-frontend-domain.com" # Update this to your deployed frontend domain
-      - key: SUPABASE_URL
-        sync: false
-      - key: SUPABASE_KEY
-        sync: false
+
       - key: JWT_SECRET_KEY
-        generateValue: true
+        sync: false
       - key: JWT_ALGORITHM
-        value: HS256
+        sync: false
       - key: JWT_ACCESS_TOKEN_EXPIRE_MINUTES
-        value: "43200" # 30 days
+        sync: false
       - key: PYTHON_VERSION
         value: 3.12.0 # Adjust according to the current environment
