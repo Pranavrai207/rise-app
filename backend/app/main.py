@@ -25,7 +25,7 @@ app.add_middleware(
     allow_origin_regex=r"^https?://(localhost|127\.0\.0\.1|192\.168\.\d+\.\d+)(:\d+)?$"
     if settings.env.lower().strip() == "dev"
     else None,
-    allow_credentials=True,
+    allow_credentials="*" not in settings.cors_origin_list,
     allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allow_headers=["Authorization", "Content-Type"],
 )
