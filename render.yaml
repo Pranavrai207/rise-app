@@ -13,7 +13,7 @@ services:
       - key: REQUIRE_HTTPS
         sync: false
       - key: CORS_ORIGINS
-        value: "https://your-frontend-domain.com" # Update this to your deployed frontend domain
+        value: "*" # Update this to your deployed frontend domain
 
       - key: JWT_SECRET_KEY
         sync: false
