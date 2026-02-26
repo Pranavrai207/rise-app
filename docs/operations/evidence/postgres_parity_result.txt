@@ -1,0 +1,4 @@
+timestamp_utc=2026-02-24T11:48:45.986620+00:00
+sql_output_path=C:\Users\conta\AppData\Local\Temp\tmpdhrheb_f.sql
+required_tokens=CREATE TABLE users,CREATE TABLE habits,CREATE TABLE audit_logs
+result=pass

@@ -1,0 +1,5 @@
+package com.rise.app
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity : FlutterActivity()

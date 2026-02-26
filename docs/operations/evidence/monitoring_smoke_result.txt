@@ -1,0 +1,4 @@
+timestamp_utc=2026-02-24T11:49:41.361282+00:00
+result=pass
+audit_event_types=auth_login_failed,rate_limit_blocked
+required_events=auth_login_failed,rate_limit_blocked

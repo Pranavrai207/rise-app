@@ -1,0 +1,103 @@
+﻿Resolving dependencies...
+Downloading packages...
+  flutter_lints 4.0.0 (6.0.0 available)
+  flutter_secure_storage 9.2.4 (10.0.0 available)
+  flutter_secure_storage_linux 1.2.3 (3.0.0 available)
+  flutter_secure_storage_macos 3.1.3 (4.0.0 available)
+  flutter_secure_storage_platform_interface 1.1.2 (2.0.1 available)
+  flutter_secure_storage_web 1.2.1 (2.1.0 available)
+  flutter_secure_storage_windows 3.1.2 (4.1.0 available)
+  js 0.6.7 (0.7.2 available)
+  lints 4.0.0 (6.1.0 available)
+  meta 1.17.0 (1.18.1 available)
+  win32 5.15.0 (6.0.0 available)
+Got dependencies!
+11 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Analyzing app...                                                
+
+   info - Use 'const' with the constructor to improve performance - lib\screens\notification_center.dart:42:22 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\screens\notification_center.dart:44:24 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\screens\notification_center.dart:144:29 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\screens\notification_center.dart:201:30 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\screens\sanctum_screen.dart:831:12 - prefer_const_constructors
+warning - The declaration '_getAvatarIcon' isn't referenced - lib\screens\sanctum_screen.dart:1057:12 - unused_element
+   info - Unnecessary braces in a string interpolation - lib\widgets\dashboard_summary.dart:179:27 - unnecessary_brace_in_string_interps
+   info - Use 'const' with the constructor to improve performance - lib\widgets\dashboard_summary.dart:295:18 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\dashboard_skeleton.dart:17:9 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\widgets\skeletons\dashboard_skeleton.dart:18:21 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\dashboard_skeleton.dart:19:13 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\dashboard_skeleton.dart:21:13 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\widgets\skeletons\dashboard_skeleton.dart:23:25 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\dashboard_skeleton.dart:24:17 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\dashboard_skeleton.dart:26:17 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\dashboard_skeleton.dart:45:18 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\widgets\skeletons\dashboard_skeleton.dart:47:23 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\dashboard_skeleton.dart:48:15 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\dashboard_skeleton.dart:50:15 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\widgets\skeletons\dashboard_skeleton.dart:51:27 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\dashboard_skeleton.dart:52:19 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\dashboard_skeleton.dart:54:19 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\widgets\skeletons\dashboard_skeleton.dart:56:31 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\dashboard_skeleton.dart:57:23 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\dashboard_skeleton.dart:59:23 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\dashboard_skeleton.dart:61:23 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\dashboard_skeleton.dart:67:15 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\dashboard_skeleton.dart:74:9 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\profile_skeleton.dart:17:9 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\widgets\skeletons\profile_skeleton.dart:18:21 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\profile_skeleton.dart:19:13 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\profile_skeleton.dart:21:13 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\widgets\skeletons\profile_skeleton.dart:23:25 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\profile_skeleton.dart:24:17 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\profile_skeleton.dart:26:17 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\profile_skeleton.dart:45:18 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\widgets\skeletons\profile_skeleton.dart:47:23 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\profile_skeleton.dart:48:15 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\profile_skeleton.dart:50:15 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\profile_skeleton.dart:52:15 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\profile_skeleton.dart:54:15 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\profile_skeleton.dart:56:15 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\profile_skeleton.dart:58:15 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\profile_skeleton.dart:60:15 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\quest_list_skeleton.dart:17:9 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\widgets\skeletons\quest_list_skeleton.dart:18:21 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\quest_list_skeleton.dart:19:13 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\quest_list_skeleton.dart:21:13 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\widgets\skeletons\quest_list_skeleton.dart:23:25 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\quest_list_skeleton.dart:24:17 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\quest_list_skeleton.dart:26:17 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\quest_list_skeleton.dart:65:14 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\widgets\skeletons\quest_list_skeleton.dart:66:19 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\quest_list_skeleton.dart:67:11 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\quest_list_skeleton.dart:68:20 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\widgets\skeletons\quest_list_skeleton.dart:70:25 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\quest_list_skeleton.dart:71:17 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\quest_list_skeleton.dart:73:17 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\quest_list_skeleton.dart:78:11 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\skeleton_card.dart:89:14 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\widgets\skeletons\skeleton_card.dart:90:19 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\skeleton_card.dart:91:11 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\skeleton_card.dart:97:11 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\skeleton_card.dart:98:20 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\widgets\skeletons\skeleton_card.dart:100:25 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\skeleton_card.dart:101:17 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\skeleton_card.dart:103:17 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\widgets\skeletons\skeleton_card.dart:108:11 - prefer_const_constructors
+
+flutter : 68 issues found. 
+(ran in 5.9s)
+At line:1 char:1
++ flutter analyze 2>&1 | 
+Out-File -FilePath 
+analyze_result.txt 
+-Encodin ...
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo         
+     : NotSpecified: (68   
+  issues found. (ran in    
+ 5.9s):String) [], Remo    
+teException
+    + FullyQualifiedErrorI 
+   d : NativeCommandError
+ 

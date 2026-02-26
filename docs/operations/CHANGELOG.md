@@ -1,0 +1,147 @@
+# Changelog
+
+## 2026-02-24
+
+### Added
+- `docs/strategy/PRD.md`
+- `docs/Secure_Vibe_Coding_Handbook.md`
+- `docs/strategy/HANDBOOK_PLAYBOOK.md`
+- `docs/strategy/IMPLEMENTATION_PLAN.md`
+- Flutter MVP project structure and modules:
+- `app/lib/app.dart`
+- `app/lib/main.dart`
+- `app/lib/models/habit.dart`
+- `app/lib/screens/sanctum_screen.dart`
+- `app/lib/repositories/habit_repository.dart`
+- `app/lib/services/habit_local_store.dart`
+- `app/lib/services/habit_api_service.dart`
+- `app/lib/widgets/*`
+- Flutter auth/session integration:
+- `app/lib/models/auth_models.dart`
+- `app/lib/services/auth_secure_store.dart`
+- `app/lib/services/auth_api_service.dart`
+- `app/lib/repositories/auth_repository.dart`
+- `app/lib/screens/auth_screen.dart`
+- Flutter API resilience/progression/extra models:
+- `app/lib/services/api_exception.dart`
+- `app/lib/models/progression.dart`
+- `app/lib/models/quest.dart`
+- `app/lib/models/profile.dart`
+- Backend foundation:
+- `backend/app/main.py`
+- `backend/app/core/config.py`
+- `backend/app/core/security.py`
+- `backend/app/core/rate_limit.py`
+- `backend/app/core/security_headers.py`
+- `backend/app/core/errors.py`
+- `backend/app/api/deps.py`
+- `backend/app/api/routes/health.py`
+- `backend/app/api/routes/auth.py`
+- `backend/app/models/auth.py`
+- `backend/app/services/auth_service.py`
+- `backend/tests/test_health.py`
+- `backend/tests/test_auth.py`
+- `backend/requirements.txt`
+- `backend/.env.example`
+- `backend/.gitignore`
+- Database and migration scaffolding:
+- `backend/app/db/base.py`
+- `backend/app/db/session.py`
+- `backend/app/db/models.py`
+- `backend/app/models/entities.py`
+- `backend/app/models/habit.py`
+- `backend/app/api/routes/habits.py`
+- `backend/alembic.ini`
+- `backend/alembic/env.py`
+- `backend/alembic/versions/0001_init.py`
+- `backend/alembic/versions/0002_audit_logs.py`
+- `backend/alembic/versions/0003_audit_user_nullable.py`
+- `backend/tests/conftest.py`
+- Progression components:
+- `backend/app/services/progression_service.py`
+- `backend/app/models/progression.py`
+- `backend/app/api/routes/progression.py`
+- Completion anti-abuse components:
+- `backend/app/services/completion_policy_service.py`
+- `backend/tests/test_completion_policy.py`
+- Backend quest/profile API components:
+- `backend/app/models/quest.py`
+- `backend/app/models/profile.py`
+- `backend/app/api/routes/quests.py`
+- `backend/app/api/routes/profile.py`
+- `backend/tests/test_quest_profile.py`
+- Backend migration runbook:
+- `backend/README.md`
+- Backend hardening and edge-case tests:
+- `backend/tests/test_progression_edge_cases.py`
+- Structured audit logging:
+- `backend/app/services/audit_service.py`
+- `backend/tests/test_audit_logs.py`
+- Error-schema and hardening tests:
+- `backend/tests/test_error_schema.py`
+- Security audit checkpoint:
+- `docs/operations/SECURITY_AUDIT_CHECKPOINT.md`
+- Go/no-go checklist:
+- `docs/operations/GO_NO_GO_CHECKLIST.md`
+- Predeploy tooling:
+- `backend/tools/predeploy_check.py`
+- Environment profiles:
+- `backend/.env.staging.example`
+- `backend/.env.production.example`
+- Operations evidence tooling/reports:
+- `backend/tools/postgres_parity_check.py`
+- `backend/tools/monitoring_smoke.py`
+- `backend/tools/backup_restore_drill.py`
+- `docs/operations/evidence/postgres_parity_result.txt`
+- `docs/operations/evidence/monitoring_smoke_result.txt`
+- `docs/operations/evidence/backup_restore_drill_result.txt`
+- Flutter runtime/cross-platform local config:
+- `app/lib/services/api_base_url.dart`
+- `app/web/index.html`
+- `app/web/manifest.json`
+- `app/web/favicon.png`
+
+### Changed
+- Updated handbook prompts and strategy docs alignment.
+- Refactored Flutter from single-file UI into modular architecture with local persistence and repository pattern.
+- Added build-time toggle for Flutter remote sync (`--dart-define=ENABLE_REMOTE_SYNC=true`).
+- Replaced backend password hashing implementation with `hashlib.scrypt` for runtime compatibility and secure verification.
+- Migrated backend auth service from in-memory user store to SQLAlchemy-backed persistence.
+- Extended auth dependency layer to resolve current user from DB using validated JWT subject.
+- Hardened refresh-token flow to require a valid existing user before issuing new access token.
+- Added auth success/failure audit events (`auth_register_*`, `auth_login_*`, `auth_refresh_*`).
+- Added production env guards for weak/default JWT secret and wildcard CORS.
+- Added unified API error response schema for HTTP/validation/unexpected errors.
+- Wired frontend auth/habit services to parse backend `message` payloads for user-visible errors.
+- Wired habit completion endpoint to server-authoritative progression recomputation and persistence.
+- Enforced server-side completion policy rules for `DAILY`, `RECURRING`, and `ONE_OFF` schedules.
+- Removed runtime `create_all` table auto-creation from API startup in favor of migration-first flow.
+- Updated test setup to apply Alembic migrations before test execution.
+- Wired Flutter app startup to auth gate and secure session restore path.
+- Wired Flutter habit sync calls to authenticated backend endpoints (`Authorization: Bearer ...`).
+- Added Flutter-side automatic token refresh and retry on `401` for authenticated calls.
+- Updated Sanctum screen to bind server progression values (XP/aura) with local fallback.
+- Hardened expired-session handling to force logout and show a clear auth-screen message when refresh fails.
+- Added Sanctum snackbar feedback for non-auth API failures.
+- Converted bottom nav into functional tab navigation and wired Quests/Spirit tabs to backend APIs.
+- Added quest status allow-list validation, security headers middleware, and structured audit logging for progression/quest/auth events.
+- Made `audit_logs.user_id` nullable to support anonymous/failure event logging.
+- Added best-effort audit logging for rate-limit blocked requests.
+- Added predeploy environment gate checker and documented no-go blockers.
+- Added evidence output generation for PostgreSQL parity and monitoring smoke scripts.
+- Closed final remediation-cycle blockers in go/no-go checklist (moved to `GO`).
+- Added platform-aware frontend API base URL defaulting for web/desktop vs Android emulator.
+- Added dev CORS localhost/127.0.0.1 regex allowance to prevent local port-specific CORS breakage.
+- Regenerated Flutter web platform support and verified local frontend/backend integration on 8083/8000.
+
+### Validation
+- `flutter analyze` => no issues.
+- `python -m pytest -q` (in `backend/`) => 13 passed.
+- `python backend/tools/postgres_parity_check.py` => pass.
+- `python backend/tools/monitoring_smoke.py` => pass.
+- `python backend/tools/backup_restore_drill.py` => pass.
+- Local runtime smoke: Flutter web (`127.0.0.1:8083`) + backend health (`127.0.0.1:8000/api/v1/health`) => pass.
+
+### Operational Notes
+- `STATUS.md` updated with expanded failure-event audit coverage.
+- Backend migrations remain source of truth for schema creation.
