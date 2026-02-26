@@ -10,17 +10,19 @@ services:
         sync: false
       - key: ENV
         value: production
-      - key: CORS_ORIGIN_LIST
-        value: '["*"]' # Adjust this as needed
+      - key: REQUIRE_HTTPS
+        value: "true"
+      - key: CORS_ORIGINS
+        value: "https://your-frontend-domain.com" # Update this to your deployed frontend domain
       - key: SUPABASE_URL
         sync: false
       - key: SUPABASE_KEY
         sync: false
-      - key: SECRET_KEY
+      - key: JWT_SECRET_KEY
         generateValue: true
-      - key: ALGORITHM
+      - key: JWT_ALGORITHM
         value: HS256
-      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+      - key: JWT_ACCESS_TOKEN_EXPIRE_MINUTES
         value: "43200" # 30 days
       - key: PYTHON_VERSION
         value: 3.12.0 # Adjust according to the current environment
