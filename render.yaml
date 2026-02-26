@@ -11,7 +11,7 @@ services:
       - key: ENV
         value: production
       - key: REQUIRE_HTTPS
-        value: true
+        sync: false
       - key: CORS_ORIGINS
         value: "https://your-frontend-domain.com" # Update this to your deployed frontend domain
 
